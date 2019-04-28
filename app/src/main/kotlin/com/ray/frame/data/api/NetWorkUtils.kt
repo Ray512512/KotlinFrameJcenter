@@ -36,7 +36,7 @@ class NetWorkUtils {
                 super.onError(e)
                 activity.stopLoadingDialog()
                 if (!ApiException.dealThrowable(activity, e)) {
-                    activity.showToast(R.string.ask_failed)
+                    activity.showToast("请求失败")
                 }
             }
         })
