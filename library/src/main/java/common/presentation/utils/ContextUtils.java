@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 
-import com.ray.frame.presentation.utils.Utils;
-
 import java.io.File;
 
 import common.BaseApp;

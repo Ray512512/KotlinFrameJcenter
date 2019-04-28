@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.rxutil
+package common.presentation.rxutil
 
 import android.util.Log
 import android.view.View

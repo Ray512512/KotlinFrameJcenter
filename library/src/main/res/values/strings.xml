@@ -103,6 +103,8 @@
     <string name="alertdialog_title">系统提示</string>
     <string name="file_save_to">图片已保存至:%s</string>
     <string name="save_succ">保存成功</string>
+    <string name="time_more">99+</string>
+    <string name="ask_failed">请求失败</string>
 
 
 </resources>

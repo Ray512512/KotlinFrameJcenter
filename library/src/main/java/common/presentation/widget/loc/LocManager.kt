@@ -10,7 +10,7 @@ import com.amap.api.location.AMapLocationListener
 import com.luck.picture.lib.dialog.PictureDialog
 import common.presentation.kotlinx.extensions.delay
 import common.presentation.kotlinx.extensions.unSafeLazy
-import com.ray.frame.presentation.rxutil.RxInterface
+import common.presentation.rxutil.RxInterface
 import common.data.AppConst
 import common.data.entry.UserCity
 import common.presentation.utils.SPUtils

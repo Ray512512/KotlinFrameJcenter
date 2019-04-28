@@ -1,6 +1,6 @@
-package com.ray.frame.presentation.navigation
+package common.presentation.navigation
 
-import com.ray.frame.presentation.utils.Experimental
+import common.presentation.utils.Experimental
 
 /**
  */

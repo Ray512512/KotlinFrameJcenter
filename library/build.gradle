@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'realm-android'
 
-version = "0.0.1"
+version = "0.0.2"
 //添加
 publish {
     userOrg = 'pulei512'//bintray.com用户名

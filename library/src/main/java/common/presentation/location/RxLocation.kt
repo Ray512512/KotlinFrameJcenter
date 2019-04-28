@@ -1,7 +1,8 @@
-package com.ray.frame.presentation.location
+package common.presentation.location
 
 import android.content.Context
 import com.amap.api.location.AMapLocation
+import common.presentation.location.LocationOnSubscribe
 import io.reactivex.BackpressureStrategy
 import io.reactivex.Flowable
 

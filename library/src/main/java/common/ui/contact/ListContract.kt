@@ -16,6 +16,10 @@ interface ListContract{
          */
         fun loadDataSuccess(data:ArrayList<T>)
         /**
+         * 查询列表数据失败
+         */
+        fun loadDataFailed(msg:String)
+        /**
          * 设置调用方法
          */
         fun getDataRepositoryFun(): Flowable<BaseListDataRes<T>>

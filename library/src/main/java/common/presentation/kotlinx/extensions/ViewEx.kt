@@ -1,6 +1,7 @@
 package common.presentation.kotlinx.extensions
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.res.ColorStateList
 import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
@@ -8,6 +9,7 @@ import android.support.annotation.Px
 import android.support.v4.content.ContextCompat
 import android.support.v4.graphics.drawable.DrawableCompat
 import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -16,8 +18,8 @@ import android.view.animation.AnimationUtils
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
-import com.ray.frame.presentation.rxutil.RxFun
-import com.ray.frame.presentation.rxutil.RxInterface
+import common.presentation.rxutil.RxFun
+import common.presentation.rxutil.RxInterface
 import common.data.AppConst
 import common.data.entry.User
 import common.presentation.utils.AnimaUtil
@@ -166,4 +168,15 @@ fun ImageView.setTintColor(colorId:Int,drawableId: Int){
 fun RecyclerView.gridItemMargin(martin:Int){
     if(layoutManager is GridLayoutManager)
         addItemDecoration(GridSpacingItemDecoration((layoutManager as GridLayoutManager).spanCount, SizeUtils.dp2px(context,martin.toFloat()),false))
+}
+
+fun RecyclerView.fixH(activity: Activity){
+    val layoutManager = object : LinearLayoutManager(activity) {
+        override fun generateDefaultLayoutParams(): RecyclerView.LayoutParams {
+            return RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT)
+        }
+    }
+    layoutManager.orientation = LinearLayoutManager.VERTICAL
+    this.layoutManager = layoutManager
 }

@@ -1,4 +1,4 @@
-package com.bd.travel.presentation.inteface
+package common.presentation.inteface
 
 interface FragmentCallback{
     fun onFragmentCreated()

@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.kotlinx.coroutine
+package common.presentation.kotlinx.coroutine
 
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleObserver

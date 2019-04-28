@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.kotlinx.extensions
+package common.presentation.kotlinx.extensions
 
 import com.luseen.logger.Logger
 

@@ -1,8 +1,9 @@
-package com.ray.frame.presentation.location
+package common.presentation.location
 
 import android.content.Context
 import com.amap.api.location.AMapLocation
 import com.amap.api.location.AMapLocationListener
+import common.presentation.location.LocationClient
 import io.reactivex.FlowableEmitter
 import io.reactivex.FlowableOnSubscribe
 

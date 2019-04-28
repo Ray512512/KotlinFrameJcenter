@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.utils
+package common.presentation.utils
 
 import android.support.v4.view.animation.FastOutLinearInInterpolator
 import android.support.v4.view.animation.FastOutSlowInInterpolator

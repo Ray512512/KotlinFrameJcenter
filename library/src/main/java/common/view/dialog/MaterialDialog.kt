@@ -1,4 +1,5 @@
-package com.ray.frame.view.dialog
+package common.view.dialog
+
 
 import android.app.Dialog
 import android.content.Context
@@ -41,9 +42,9 @@ class MaterialDialog(context: Context) : Dialog(context, R.style.MaterialDialogS
 
     private var cancled=true
     var isAutoDissmiss=true
-    private var curretnType:DialogType=DialogType.ERROR
+    private var curretnType: DialogType = DialogType.ERROR
 
-    fun setIsAutoDissmiss(b:Boolean):MaterialDialog{
+    fun setIsAutoDissmiss(b:Boolean): MaterialDialog {
         isAutoDissmiss=b
         return this
     }
@@ -58,7 +59,7 @@ class MaterialDialog(context: Context) : Dialog(context, R.style.MaterialDialogS
         dialogContainer.onClick { if(cancled)hide() }
     }
 
-    infix fun cancelable(flag: Boolean):MaterialDialog {
+    infix fun cancelable(flag: Boolean): MaterialDialog {
         cancled=flag
         setCancelable(flag)
         setCanceledOnTouchOutside(flag)
@@ -83,16 +84,16 @@ class MaterialDialog(context: Context) : Dialog(context, R.style.MaterialDialogS
         curretnType=type
         img.show()
         when(type){
-            DialogType.ERROR->{
+            DialogType.ERROR ->{
                 img.setImageResource(R.mipmap.ic_error)
                 img.onClick {
                     dismiss()
                 }
             }
-            DialogType.RIGHT->{
+            DialogType.RIGHT ->{
                 img.setImageResource(R.mipmap.ic_right)
             }
-            DialogType.TEXT->{
+            DialogType.TEXT ->{
                 img.hide()
             }
         }
@@ -138,7 +139,7 @@ class MaterialDialog(context: Context) : Dialog(context, R.style.MaterialDialogS
     override fun show() {
         super.show()
         delay(1000){
-            if(curretnType==DialogType.RIGHT&&isShowing&&isAutoDissmiss){
+            if(curretnType== DialogType.RIGHT &&isShowing&&isAutoDissmiss){
                 dismiss()
             }
         }

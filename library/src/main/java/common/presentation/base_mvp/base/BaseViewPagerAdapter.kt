@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.base_mvp.base
+package common.presentation.base_mvp.base
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager

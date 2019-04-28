@@ -16,7 +16,7 @@ import android.view.ViewTreeObserver;
 import com.kotlin.library.R;
 
 /**
- * 图片文字居中按钮
+ * 图片文字居中Radio按钮
  */
 public class VectorCompatRadioButton extends AppCompatRadioButton {
 

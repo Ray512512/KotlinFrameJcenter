@@ -6,11 +6,9 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentTransaction
 import android.support.v7.app.AppCompatActivity
 import com.kotlin.library.R
-import com.ray.frame.presentation.kotlinx.extensions.log
-import com.ray.frame.presentation.navigation.BackStrategy
-import com.ray.frame.presentation.navigation.NavigationState
+import common.presentation.kotlinx.extensions.log
 import javax.inject.Inject
-import com.ray.frame.presentation.utils.Experimental
+import common.presentation.utils.Experimental
 import common.di.scope.PerActivity
 
 /**

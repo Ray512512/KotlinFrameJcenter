@@ -1,6 +1,5 @@
-package com.ray.frame.presentation.base_mvp.base
+package common.presentation.base_mvp.base
 
-import common.presentation.base_mvp.base.BaseContract
 import io.armcha.arch.BaseMVPPresenter
 
 

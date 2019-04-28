@@ -172,7 +172,12 @@
         <item name="android:textSize">@dimen/text_2</item>
         <item name="android:textColor">@color/text_1</item>
     </style>
-
+    <style name="Text_normal_gray">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_2</item>
+        <item name="android:textColor">@color/text_3</item>
+    </style>
     <style name="Text_normal_w">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

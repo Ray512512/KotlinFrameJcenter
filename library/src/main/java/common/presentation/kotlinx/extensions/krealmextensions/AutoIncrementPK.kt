@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.kotlinx.extensions.krealmextensions
+package common.presentation.kotlinx.extensions.krealmextensions
 
 /**
  * Created by Oesia on 26/09/2017.

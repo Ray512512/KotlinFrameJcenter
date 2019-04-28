@@ -9,10 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.kotlin.library.R
-import com.ray.frame.presentation.navigation.BackStrategy
-import com.ray.frame.presentation.rxutil.RxBus
-import com.ray.frame.view.dialog.MaterialDialog
-import common.BaseApp
+import common.presentation.navigation.BackStrategy
+import common.presentation.rxutil.RxBus
+import common.view.dialog.MaterialDialog
 import common.data.base.DealErrorType
 import common.presentation.kotlinx.extensions.emptyString
 import common.presentation.kotlinx.extensions.get
@@ -192,7 +191,7 @@ abstract class BaseFragment<V : BaseContract.View, P : BaseContract.Presenter<V>
     }
 
 
-    fun showDialog(message: String, type: MaterialDialog.DialogType=MaterialDialog.DialogType.ERROR) {
+    fun showDialog(message: String, type: MaterialDialog.DialogType= MaterialDialog.DialogType.ERROR) {
         activity.showDialog(message, type)
     }
 
@@ -200,7 +199,7 @@ abstract class BaseFragment<V : BaseContract.View, P : BaseContract.Presenter<V>
         activity.showDialog(message, btnText,action)
     }
 
-    fun showDialog(title:String="",message: String,btnText:String,action: MaterialDialog.() -> Unit, btnText2:String,action2: MaterialDialog.() -> Unit) {
+    fun showDialog(title:String="", message: String, btnText:String, action: MaterialDialog.() -> Unit, btnText2:String, action2: MaterialDialog.() -> Unit) {
         activity.showDialog(title,message, btnText,action,btnText2,action2)
     }
 

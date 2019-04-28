@@ -91,4 +91,9 @@ class WebActivity :  AppCompatActivity(), WebViewAgent.WebAgentCallBack {
             finish()
         }
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        webAgent.onActivityResult(requestCode,resultCode,data)
+    }
 }

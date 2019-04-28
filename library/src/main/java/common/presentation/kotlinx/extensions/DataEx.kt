@@ -143,3 +143,11 @@ fun Float?.getNotNullFolat():Float{
     if(this==null)return 0F
     return this
 }
+/**
+ * 保留两位小数
+ */
+fun Double?.getIntStr():String{
+    if(this==null)return "0"
+    return DecimalFormat("##0").format(this)
+}
+

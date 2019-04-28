@@ -13,11 +13,10 @@ import android.support.v4.content.ContextCompat
 import android.text.Html
 import android.text.Spanned
 import android.widget.Toast
-import com.ray.frame.presentation.utils.Experimental
 import common.presentation.utils.Lg
-import io.reactivex.BackpressureStrategy
-import io.reactivex.Flowable
-import io.reactivex.FlowableTransformer
+import okhttp3.RequestBody
+import java.io.File
+import java.util.HashMap
 
 
 infix fun Context.takeColor(colorId: Int) = ContextCompat.getColor(this, colorId)
@@ -55,6 +54,12 @@ inline fun delay(milliseconds: Long, crossinline action: () -> Unit) {
     Handler().postDelayed({
         action()
     }, milliseconds)
+}
+
+inline fun post(crossinline action: () -> Unit) {
+    Handler().post {
+        action()
+    }
 }
 
 @Deprecated("Use emptyString instead", ReplaceWith("emptyString"), level = DeprecationLevel.WARNING)

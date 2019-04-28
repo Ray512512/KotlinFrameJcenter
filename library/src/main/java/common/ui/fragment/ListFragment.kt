@@ -110,7 +110,14 @@ abstract class ListFragment<D>: BaseFragment<PListContract.View<D>, PListContrac
             pullable_rec.setCanPullUp(false)
         }
     }
-
+    override fun loadDataFailed(msg:String){
+        if(pageIndex==1){
+            pullto_layout.refreshFinish()
+        }else{
+            pullto_layout.loadmoreFinish(PullToRefreshLayout.FAIL)
+        }
+        showErrorView(msg)
+    }
     override fun loadData(data: ListP<D>) {
         frameCallback?.getDataSuccess(pageIndex,data)
     }

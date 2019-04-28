@@ -201,4 +201,14 @@ public class ValidatorUtil {
             return false;
         }
     }
+
+      public static String replaceBlank(String src) {
+        String dest = "";
+        if (src != null) {
+            Pattern pattern = Pattern.compile("\t|\r|\n|\\s*");
+            Matcher matcher = pattern.matcher(src);
+            dest = matcher.replaceAll("");
+        }
+        return dest;
+    }
 }

@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.kotlinx.delegates
+package common.presentation.kotlinx.delegates
 
 import android.support.v4.app.Fragment
 import common.presentation.kotlinx.extensions.isNull

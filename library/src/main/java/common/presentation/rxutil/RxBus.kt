@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.rxutil
+package common.presentation.rxutil
 
 import com.hwangjr.rxbus.Bus
 import com.hwangjr.rxbus.thread.ThreadEnforcer

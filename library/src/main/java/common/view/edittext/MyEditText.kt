@@ -1,4 +1,4 @@
-package com.ray.frame.view.edittext
+package common.view.edittext
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
@@ -12,8 +12,8 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.*
 import com.kotlin.library.R
-import com.ray.frame.presentation.simple.SimpleTextWatcher
-import com.ray.frame.presentation.utils.AnimationUtils
+import common.presentation.simple.SimpleTextWatcher
+import common.presentation.utils.AnimationUtils
 import common.presentation.kotlinx.extensions.*
 import common.presentation.utils.ValidatorUtil
 import common.presentation.utils.ViewUtils

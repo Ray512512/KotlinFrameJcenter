@@ -4,7 +4,7 @@ import android.Manifest
 import android.app.Activity
 import com.kotlin.library.R
 import com.luck.picture.lib.permissions.RxPermissions
-import com.ray.frame.view.dialog.MaterialDialog
+import common.view.dialog.MaterialDialog
 import common.presentation.utils.PermissionPageUtils
 import me.nereo.multi_image_selector.MultiImageSelector
 

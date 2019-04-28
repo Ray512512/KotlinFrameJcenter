@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.navigation
+package common.presentation.navigation
 
 /**
  */

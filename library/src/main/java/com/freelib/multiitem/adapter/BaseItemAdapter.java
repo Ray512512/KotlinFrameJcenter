@@ -229,6 +229,12 @@ public class BaseItemAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         footItems.add(footItem);
     }
 
+    public void clearFoot(){
+        if(footItems.size()!=0){
+            footItems.clear();
+            notifyDataSetChanged();
+        }
+    }
     /**
      * 添加head View，默认为充满父布局
      * <p>

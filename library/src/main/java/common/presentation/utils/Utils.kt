@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.utils
+package common.presentation.utils
 
 import android.app.ActivityManager
 import android.content.Context

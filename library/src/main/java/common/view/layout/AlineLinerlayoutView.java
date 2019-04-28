@@ -15,7 +15,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.kotlin.library.R;
-import com.ray.frame.presentation.utils.Utils;
+import common.presentation.utils.Utils;
 
 import common.presentation.utils.SizeUtils;
 

@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.kotlinx.extensions.krealmextensions
+package common.presentation.kotlinx.extensions.krealmextensions
 
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -30,7 +30,7 @@ private fun <T : RealmModel> T.performQuery(fieldName : List<String>? = null, or
     val looper = getLooper()
     return Single.create<List<T>>({ emitter ->
 
-        val realm = com.ray.frame.presentation.kotlinx.extensions.krealmextensions.RealmConfigStore.Companion.fetchConfiguration(javaClass)?.realm() ?: Realm.getDefaultInstance()
+        val realm = RealmConfigStore.Companion.fetchConfiguration(javaClass)?.realm() ?: Realm.getDefaultInstance()
         val realmQuery: RealmQuery<T> = realm.where(this.javaClass)
         query?.invoke(realmQuery)
 

@@ -1,6 +1,6 @@
 package common.data.api
 
-import com.ray.frame.presentation.base_mvp.base.BasePresenter
+import common.presentation.base_mvp.base.BasePresenter
 import common.presentation.base_mvp.base.BaseContract
 import io.reactivex.Flowable
 

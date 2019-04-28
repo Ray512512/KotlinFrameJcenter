@@ -8,8 +8,7 @@ import android.os.Build;
 
 import com.kotlin.library.R;
 import com.luck.picture.lib.permissions.RxPermissions;
-import com.ray.frame.presentation.rxutil.RxInterface;
-import com.ray.frame.view.dialog.MaterialDialog;
+import common.view.dialog.MaterialDialog;
 
 import common.presentation.utils.PermissionPageUtils;
 

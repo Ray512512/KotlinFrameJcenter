@@ -6,6 +6,8 @@ import common.ui.contact.ListContract
 import common.ui.presenter.ListPresenter
 import common.presentation.base_mvp.base.BaseActivity
 import common.adapter.RecyleAdapter
+import common.ui.contact.SimpleListContract
+import common.ui.presenter.SimpleListPresenter
 import common.view.pulltorefreshview.PullToRefreshLayout
 import kotlinx.android.synthetic.main.activity_list.*
 import kotlinx.android.synthetic.main.pull_rec.*
@@ -15,10 +17,10 @@ import javax.inject.Inject
  * 父类实现加载数据等基础业务逻辑
  * 子类只需关心实际业务
  */
-abstract class ListActivity<D>: BaseActivity<ListContract.View<D>, ListContract.Presenter<D>>(), PullToRefreshLayout.OnRefreshListener, ListContract.View<D> {
+abstract class SimpleListActivity<D>: BaseActivity<SimpleListContract.View<D>, SimpleListContract.Presenter<D>>(), PullToRefreshLayout.OnRefreshListener, SimpleListContract.View<D> {
 
     @Inject
-    lateinit var lisePresenter: ListPresenter<D>
+    lateinit var lisePresenter: SimpleListPresenter<D>
 
     override fun initPresenter()=lisePresenter
 
@@ -77,5 +79,14 @@ abstract class ListActivity<D>: BaseActivity<ListContract.View<D>, ListContract.
         if(data.size<pageSize){
             pullable_rec.setCanPullUp(false)
         }
+    }
+
+    override fun loadDataFailed(msg:String){
+        if(pageIndex==1){
+            pullto_layout.refreshFinish()
+        }else{
+            pullto_layout.loadmoreFinish(PullToRefreshLayout.FAIL)
+        }
+        showErrorView(msg)
     }
 }

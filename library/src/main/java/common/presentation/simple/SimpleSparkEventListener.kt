@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.simple
+package common.presentation.simple
 
 import android.widget.ImageView
 import com.varunest.sparkbutton.SparkEventListener

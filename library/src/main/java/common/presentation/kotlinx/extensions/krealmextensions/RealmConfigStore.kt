@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.kotlinx.extensions.krealmextensions
+package common.presentation.kotlinx.extensions.krealmextensions
 
 import android.util.Log
 import io.realm.Realm

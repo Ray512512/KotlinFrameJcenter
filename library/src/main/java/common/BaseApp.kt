@@ -11,7 +11,7 @@ import com.kotlin.library.BuildConfig
 import com.kotlin.library.R
 import com.luseen.logger.LogType
 import com.luseen.logger.Logger
-import com.ray.frame.presentation.utils.Utils
+import common.presentation.utils.Utils
 import common.crash.CrashHandler
 import common.data.entry.User
 import common.presentation.kotlinx.extensions.get
@@ -70,7 +70,7 @@ open class BaseApp : Application() {
 
     private fun initLogger() {
         Logger.Builder()
-                .isLoggable(BuildConfig.DEBUG)
+                .isLoggable(BuildConfig.IS_DEBUG)
                 .logType(LogType.ERROR)
                 .tag(get(R.string.app_tag_name))
                 .setIsKotlin(true)
@@ -85,7 +85,6 @@ open class BaseApp : Application() {
         }
 
         override fun onActivityResumed(activity: Activity?) {
-            currentActivity=activity
         }
 
         override fun onActivityStarted(activity: Activity?) {

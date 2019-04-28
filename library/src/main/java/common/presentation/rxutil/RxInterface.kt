@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.rxutil
+package common.presentation.rxutil
 
 /**
  * Created by Ray on 2018/3/7.

@@ -82,7 +82,7 @@ class ApiModule {
 
 
 
-    @Singleton
+//    @Singleton
     @Provides
     fun provideCompositeDisposable() = CompositeDisposable()
 }

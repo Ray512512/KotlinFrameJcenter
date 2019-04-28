@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.simple
+package common.presentation.simple
 
 import android.text.Editable
 import android.text.TextWatcher

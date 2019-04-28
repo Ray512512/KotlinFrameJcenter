@@ -24,6 +24,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.kotlin.library.R;
+
 
 /**
  * Created by Ray on 2017/5/18.
@@ -327,5 +329,24 @@ public class ViewUtils {
                 }
             }
         });
+    }
+
+    /**
+     * 设置未读tab显示
+     */
+    public static void  setMsgUnread(TextView tv,int unRead) {
+        String  unReadStr = unRead+"";
+        if(unRead==0){
+            tv.setVisibility(View.GONE);
+        }else {
+            tv.setVisibility(View.GONE);
+        }
+        if (unRead > 99) {
+            tv.setBackground(ContextCompat.getDrawable(tv.getContext(), R.drawable.point2));
+            unReadStr = tv.getResources().getString(R.string.time_more);
+        }else {
+            tv.setBackground(ContextCompat.getDrawable(tv.getContext(), R.drawable.point_red));
+        }
+        tv.setText(unReadStr);
     }
 }

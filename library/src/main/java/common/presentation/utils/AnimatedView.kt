@@ -1,6 +1,7 @@
 package com.ray.frame.presentation.utils
 
 import android.view.View
+import common.presentation.utils.AnimationUtils
 
 /**
  */

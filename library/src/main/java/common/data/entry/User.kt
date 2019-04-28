@@ -1,9 +1,9 @@
 package common.data.entry
 
 import android.content.Context
-import com.ray.frame.presentation.kotlinx.extensions.krealmextensions.deleteAll
-import com.ray.frame.presentation.kotlinx.extensions.krealmextensions.queryFirst
-import com.ray.frame.presentation.kotlinx.extensions.krealmextensions.save
+import common.presentation.kotlinx.extensions.krealmextensions.deleteAll
+import common.presentation.kotlinx.extensions.krealmextensions.queryFirst
+import common.presentation.kotlinx.extensions.krealmextensions.save
 import io.realm.RealmObject
 
 /**

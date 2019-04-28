@@ -16,9 +16,9 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
 import com.kotlin.library.R
-import com.ray.frame.presentation.navigation.BackStrategy
-import com.ray.frame.presentation.rxutil.RxBus
-import com.ray.frame.view.dialog.MaterialDialog
+import common.presentation.navigation.BackStrategy
+import common.presentation.rxutil.RxBus
+import common.view.dialog.MaterialDialog
 import common.data.base.DealErrorType
 import common.presentation.kotlinx.extensions.emptyString
 import common.presentation.kotlinx.extensions.get
@@ -166,7 +166,7 @@ abstract class BaseActivity<V : BaseContract.View, P : BaseContract.Presenter<V>
     }
 
     fun getContext(): Context = this
-    fun showDialog(message: String,type: MaterialDialog.DialogType=MaterialDialog.DialogType.ERROR) {
+    fun showDialog(message: String,type: MaterialDialog.DialogType= MaterialDialog.DialogType.ERROR) {
         if(message.isEmpty())return
         checkDialog()
         dialog = MaterialDialog(this).apply {
@@ -185,10 +185,10 @@ abstract class BaseActivity<V : BaseContract.View, P : BaseContract.Presenter<V>
         }
     }
 
-    fun showDialog(message: String,btnText:String,action: MaterialDialog.() -> Unit,btnText2:String,action2: MaterialDialog.() -> Unit) {
+    fun showDialog(message: String, btnText:String, action: MaterialDialog.() -> Unit, btnText2:String, action2: MaterialDialog.() -> Unit) {
         showDialog("",message,btnText,action,btnText2,action2)
     }
-    fun showDialog(title:String="",message: String,btnText:String,action: MaterialDialog.() -> Unit,btnText2:String,action2: MaterialDialog.() -> Unit) {
+    fun showDialog(title:String="", message: String, btnText:String, action: MaterialDialog.() -> Unit, btnText2:String, action2: MaterialDialog.() -> Unit) {
         if(message.isEmpty())return
         checkDialog()
         dialog = MaterialDialog(this).apply {

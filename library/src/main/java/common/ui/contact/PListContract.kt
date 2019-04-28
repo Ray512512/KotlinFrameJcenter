@@ -16,7 +16,10 @@ interface PListContract{
          * 查询列表数据成功
          */
         fun loadDataSuccess(data:ArrayList<T>)
-
+        /**
+         * 查询列表数据失败
+         */
+        fun loadDataFailed(msg:String)
         /**
          * 查询完整数据
          */

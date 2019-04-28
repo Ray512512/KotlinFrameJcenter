@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.utils
+package common.presentation.utils
 
 import android.content.Context
 import android.view.Surface

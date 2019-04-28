@@ -1,8 +1,8 @@
-package com.ray.frame.presentation.kotlinx.extensions
+package common.presentation.kotlinx.extensions
 
-import android.app.Activity
 import android.content.Intent
 import android.content.res.Configuration
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Parcelable
 import android.support.v4.app.Fragment
@@ -53,4 +53,5 @@ inline infix fun <reified T> Fragment.extraWithKey(key: String): T {
 
 fun Fragment.isPortrait() = resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
 
-infix fun Fragment.takeColor(colorId: Int) = context?.apply { ContextCompat.getColor(this, colorId) }
+infix fun Fragment.takeColor(colorId: Int) = context!!.run { ContextCompat.getColor(this, colorId) }
+infix fun Fragment.takeDrawable(resId: Int): Drawable= context!!.run{ContextCompat.getDrawable(this,resId)!!}

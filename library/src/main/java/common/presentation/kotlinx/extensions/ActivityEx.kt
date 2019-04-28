@@ -1,4 +1,4 @@
-package com.ray.frame.presentation.kotlinx.extensions
+package common.presentation.kotlinx.extensions
 
 import android.app.Activity
 import android.content.Intent
@@ -68,6 +68,8 @@ inline fun <reified T> Activity.start2(startCode:Int,arg:Map<String,Any>) {
 }
 
 fun Activity.isPortrait() = this.resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
+
+infix fun Activity.takeColor(colorId: Int) = ContextCompat.getColor(this, colorId)
 
 fun Activity.setResult(code:Int,arg:Map<String,Any>){
     val intent=Intent()
