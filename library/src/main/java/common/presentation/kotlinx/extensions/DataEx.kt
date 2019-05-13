@@ -67,7 +67,6 @@ fun String.cutEndTag(tag:String):String{
  * 逗号字符串转集合
  */
 fun String.getList(maxSize:Int= Int.MAX_VALUE):List<String>{
-
     val list=ArrayList<String>()
     if(this.isEmpty())return list
     for (i in this.split(",")){
@@ -149,5 +148,27 @@ fun Float?.getNotNullFolat():Float{
 fun Double?.getIntStr():String{
     if(this==null)return "0"
     return DecimalFormat("##0").format(this)
+}
+
+fun <E>ArrayList<E>.putAll( c: Collection<E>):ArrayList<E>{
+    addAll(c)
+    return this
+}
+
+fun String?.getRealOrNull():String?{
+    return if(isNullOrEmpty()) null else this
+}
+
+/**
+ * 保留两位小数
+ */
+fun Double?.custMoney():String{
+    if(this==null)return "0.00"
+    return StringUtils.castMoney(this)
+}
+
+
+inline fun <reified T>  ArrayList<T>?.isNullOrEmpty():Boolean {
+    return this == null || isEmpty()
 }
 

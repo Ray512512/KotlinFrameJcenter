@@ -1,5 +1,6 @@
 package common.presentation.kotlinx.extensions
 
+import android.app.Activity
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.drawable.Drawable
@@ -55,3 +56,9 @@ fun Fragment.isPortrait() = resources.configuration.orientation == Configuration
 
 infix fun Fragment.takeColor(colorId: Int) = context!!.run { ContextCompat.getColor(this, colorId) }
 infix fun Fragment.takeDrawable(resId: Int): Drawable= context!!.run{ContextCompat.getDrawable(this,resId)!!}
+inline  fun <reified T> getFragmentInstance(activity: Activity, bundle: Bundle):T{
+    val tag = T::class.java.name
+    val fragment = Fragment.instantiate(activity, tag)
+    fragment.arguments=bundle
+    return fragment as T
+}

@@ -22,6 +22,19 @@ class SimpImgAdapter constructor(var activity: Activity, var isAdd:Boolean, var 
     interface ImgClick{
         fun ImgItemClick(pos:Int)
     }
+    companion object {
+        const val ADD_KEY="add"
+    }
+
+    private fun getShowList():ArrayList<String>{
+        val r=ArrayList<String>(data.size)
+        for (i in data){
+            if(i!=ADD_KEY){
+                r.add(i)
+            }
+        }
+        return r
+    }
 
     override fun convert(helper: BaseAdapterHelper, item: String, position: Int) {
         val img = helper.getImageView(R.id.simple_item_img)
@@ -38,12 +51,12 @@ class SimpImgAdapter constructor(var activity: Activity, var isAdd:Boolean, var 
                 notifyDataSetChanged()
             }
             if(item.isNotEmpty()){
-                GlideUtils.loadRound(activity,item,img, SizeUtils.dp2px(context,4F))
+                GlideUtils.loadRound(activity,item,img,radius)
             }else{
                 img.setImageResource(R.mipmap.ic_add_pic)
             }
         }else{
             GlideUtils.loadRound(activity,item,img,radius)
-        }
+    }
     }
 }
